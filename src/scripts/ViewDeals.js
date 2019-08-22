@@ -1,6 +1,7 @@
 class ViewDeals {
-  constructor(store, template) {
+  constructor(store, filterDeals, template) {
     this.store = store;
+    this.filterDeals = filterDeals;
     this.template = template;
     this.dealList = document.getElementById("deal-list");
   }
@@ -13,7 +14,10 @@ class ViewDeals {
   }
 
   update(state) {
-    this.render(this.store.deals)
+
+    // TODO: This shouldn't work like this. FilterDeals should setDeals
+    const filtered = this.filterDeals.update( state );
+    this.render( filtered )
   }
 }
 
