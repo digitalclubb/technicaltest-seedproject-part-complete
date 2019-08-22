@@ -9,6 +9,15 @@ describe( "FilterDeals", () => {
     const result = store.deals;
     const filterDeals = new FilterDeals();
 
+    // TODO: Probable shared Util/Helper function
+    // TODO: Review: Is this a wasted test of core JS?
+    describe( "lowerCase", () => {
+        it( "should convert all array entries to lowercase for comparison", () => {
+            const array = filterDeals.lowerCase( ["TV", "Broadband", "Phone"] );
+            expect( array ).toEqual( ["tv", "broadband", "phone"] );
+        });
+    });
+
     // Would potentially test native JS here
     describe( "filterByProvider", () => {
 

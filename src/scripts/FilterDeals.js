@@ -4,6 +4,11 @@ class FilterDeals {
         this.store = store;
     }
 
+    // Convert array entries to lower case for comparison
+    lowerCase( array ) {
+        return array.map( item => item.toLowerCase() );
+    }
+
     // Filter deals by Provider ID
     filterByProvider( deals, provider ) {
         return deals.filter( deal => deal.provider.id === provider );
