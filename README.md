@@ -1,5 +1,45 @@
 # Decision Technologies Front-End Technical Test
 
+## Reasoning and roadmap
+
+- TDD is hard to get right. Concerned I'm only testing happy paths here. Would love feedback.
+- Lots of TODOs about and not happy with modifying viewDeals. Ideally I wanted to set an observer and update the store.
+- Rather than committing failing tests (considering something like CI), I have favoured committing feature and test together (if small enough) so they are independent and valuable.
+- Commits have been direct to master on my fork. I would create a feature branch per deliverable and keep them small.
+- Consider server side rendering to improve web perf. Dynamic updates on the fly with JS should be seen as an enhancement.
+
+### UX concerns
+
+- Tests are passing but are expecting single 'product only' deals. Can't view ones with mobile?
+- Using checkboxes for providers suggests you can select multiple.
+
+### Potential project structure
+
+- A nice project structure could potentially look to have the JS, spec and Sass all in related folders:
+```
+src
+│   README.md
+│   package.json 
+│
+└───components
+│   │
+│   └───card
+│       │   card.js
+│       │   card.spec.js
+│       │   card.scss
+│   │
+│   └───filters
+│       │   filters.js
+│       │   filters.spec.js
+│       │   filters.scss
+│
+└───utils
+│   │
+│   └───removeEntry
+│       │   removeEntry.js
+│       │   removeEntry.spec.js
+```
+
 ## Prerequisites
 
 - NodeJS (at least latest LTS)
