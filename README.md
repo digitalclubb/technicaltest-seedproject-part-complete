@@ -40,7 +40,6 @@ src
 │       │   removeEntry.spec.js
 ```
 
-## Prerequisites
 ## Getting started
 
 Please fork this repository to get started.
