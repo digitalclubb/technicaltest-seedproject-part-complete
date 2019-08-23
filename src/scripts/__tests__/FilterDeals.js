@@ -34,12 +34,12 @@ describe( "FilterDeals", () => {
     });
 
     describe( "removeFibre", () => {
-        it.skip( "should remove Fibre from the array of products", () => {
+        it( "should remove Fibre from the array of products", () => {
             const array = filterDeals.removeFibre( ["TV", "Fibre Broadband", "Phone"] );
             expect( array ).toEqual( ["TV", "Broadband", "Phone"] );
         });
 
-        it.skip( "should return the same array if it cannot find Fibre", () => {
+        it( "should return the same array if it cannot find Fibre", () => {
             const array = filterDeals.removeFibre( ["TV", "Broadband", "Phone"] );
             expect( array ).toEqual( ["TV", "Broadband", "Phone"] );
         });

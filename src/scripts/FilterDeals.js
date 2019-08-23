@@ -9,8 +9,14 @@ class FilterDeals {
         return array.map( item => item.toLowerCase() );
     }
 
+    // Remove 'Phone' from the array so it can be ignored
     removeEntry( array, toRemove ) {
         return array.filter( item => item !== toRemove );
+    }
+
+    // Remove the Fibre string so all broadband is equal
+    removeFibre( array ) {
+        return array.map( item => item.replace( /Fibre /g, '' ) );
     }
 
     // Filter deals by Provider ID
