@@ -33,6 +33,18 @@ describe( "FilterDeals", () => {
         });
     });
 
+    describe( "removeFibre", () => {
+        it.skip( "should remove Fibre from the array of products", () => {
+            const array = filterDeals.updateBroadband( ["TV", "Fibre Broadband", "Phone"] );
+            expect( array ).toEqual( ["TV", "Broadband", "Phone"] );
+        });
+
+        it.skip( "should return the same array if it cannot find Fibre", () => {
+            const array = filterDeals.removeEntry( ["TV", "Broadband", "Phone"] );
+            expect( array ).toEqual( ["TV", "Broadband", "Phone"] );
+        });
+    });
+
     describe( "filterByProduct", () => {
         it.skip( "should return 4 deals when filtering by broadband", () => {
             const deals = filterDeals.filterByType( result, ["Broadband"] );
