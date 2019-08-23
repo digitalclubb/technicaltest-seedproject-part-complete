@@ -18,6 +18,28 @@ describe( "FilterDeals", () => {
         });
     });
 
+    describe( "filterByType", () => {
+        it.skip( "should return 4 deals when filtering by broadband", () => {
+            const deals = filterDeals.filterByType( result, ["Broadband"] );
+            expect( deals.length ).toEqual( 4 );
+        });
+
+        it.skip( "should return 4 deals when filtering by broadband and tv", () => {
+            const deals = filterDeals.filterByType( result, ["Broadband", "TV"] );
+            expect( deals.length ).toEqual( 4 );
+        });
+
+        it.skip( "should return only 1 deal when filtering by broadband and mobile", () => {
+            const deals = filterDeals.filterByType( result, ["Broadband", "Mobile"] );
+            expect( deals.length ).toEqual( 1 );
+        });
+
+        it.skip( "should return 3 deals when filtering by mobile", () => {
+            const deals = filterDeals.filterByType( result, ["Mobile"] );
+            expect( deals.length ).toEqual( 3 );
+        });
+    });
+
     // Would potentially test native JS here
     describe( "filterByProvider", () => {
 
@@ -34,4 +56,5 @@ describe( "FilterDeals", () => {
         });
 
     });
+
 });
