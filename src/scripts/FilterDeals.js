@@ -9,6 +9,10 @@ class FilterDeals {
         return array.map( item => item.toLowerCase() );
     }
 
+    removeEntry( array, toRemove ) {
+        return array.filter( item => item !== toRemove );
+    }
+
     // Filter deals by Provider ID
     filterByProvider( deals, provider ) {
         return deals.filter( deal => deal.provider.id === provider );

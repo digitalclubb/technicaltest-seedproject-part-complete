@@ -20,13 +20,13 @@ describe( "FilterDeals", () => {
 
     // TODO: Another possible Util/Helper here
     describe( "removeEntry", () => {
-        it.skip( "should remove phone from the array of products", () => {
+        it( "should remove phone from the array of products", () => {
             const toRemove = "Phone";
             const array = filterDeals.removeEntry( ["TV", "Broadband", "Phone"], toRemove );
             expect( array ).toEqual( ["TV", "Broadband"] );
         });
 
-        it.skip( "should return the same array if it cannot find the item", () => {
+        it( "should return the same array if it cannot find the item", () => {
             const toRemove = "Mobile";
             const array = filterDeals.removeEntry( ["TV", "Broadband", "Phone"], toRemove );
             expect( array ).toEqual( ["TV", "Broadband", "Phone"] );
@@ -35,12 +35,12 @@ describe( "FilterDeals", () => {
 
     describe( "removeFibre", () => {
         it.skip( "should remove Fibre from the array of products", () => {
-            const array = filterDeals.updateBroadband( ["TV", "Fibre Broadband", "Phone"] );
+            const array = filterDeals.removeFibre( ["TV", "Fibre Broadband", "Phone"] );
             expect( array ).toEqual( ["TV", "Broadband", "Phone"] );
         });
 
         it.skip( "should return the same array if it cannot find Fibre", () => {
-            const array = filterDeals.removeEntry( ["TV", "Broadband", "Phone"] );
+            const array = filterDeals.removeFibre( ["TV", "Broadband", "Phone"] );
             expect( array ).toEqual( ["TV", "Broadband", "Phone"] );
         });
     });
