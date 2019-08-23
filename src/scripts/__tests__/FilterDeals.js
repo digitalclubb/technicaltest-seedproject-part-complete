@@ -18,7 +18,22 @@ describe( "FilterDeals", () => {
         });
     });
 
-    describe( "filterByType", () => {
+    // TODO: Another possible Util/Helper here
+    describe( "removeEntry", () => {
+        it.skip( "should remove phone from the array of products", () => {
+            const toRemove = "Phone";
+            const array = filterDeals.removeEntry( ["TV", "Broadband", "Phone"], toRemove );
+            expect( array ).toEqual( ["TV", "Broadband"] );
+        });
+
+        it.skip( "should return the same array if it cannot find the item", () => {
+            const toRemove = "Mobile";
+            const array = filterDeals.removeEntry( ["TV", "Broadband", "Phone"], toRemove );
+            expect( array ).toEqual( ["TV", "Broadband", "Phone"] );
+        });
+    });
+
+    describe( "filterByProduct", () => {
         it.skip( "should return 4 deals when filtering by broadband", () => {
             const deals = filterDeals.filterByType( result, ["Broadband"] );
             expect( deals.length ).toEqual( 4 );
