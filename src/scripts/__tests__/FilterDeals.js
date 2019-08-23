@@ -46,21 +46,22 @@ describe( "FilterDeals", () => {
     });
 
     describe( "filterByProduct", () => {
-        it.skip( "should return 4 deals when filtering by broadband", () => {
+        it( "should return 4 deals when filtering by broadband", () => {
             const deals = filterDeals.filterByProduct( result, ["Broadband"] );
             expect( deals.length ).toEqual( 4 );
         });
 
-        it.skip( "should return 4 deals when filtering by broadband and tv", () => {
+        it( "should return 4 deals when filtering by broadband and tv", () => {
             const deals = filterDeals.filterByProduct( result, ["Broadband", "TV"] );
             expect( deals.length ).toEqual( 4 );
         });
 
-        it.skip( "should return only 1 deal when filtering by broadband and mobile", () => {
+        it( "should return only 1 deal when filtering by broadband and mobile", () => {
             const deals = filterDeals.filterByProduct( result, ["Broadband", "Mobile"] );
             expect( deals.length ).toEqual( 1 );
         });
 
+        // TODO: Is this a valid test? Broadband only but mobile only too?
         it.skip( "should return 3 deals when filtering by mobile", () => {
             const deals = filterDeals.filterByProduct( result, ["Mobile"] );
             expect( deals.length ).toEqual( 3 );
